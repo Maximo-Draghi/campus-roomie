@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css/stylepublicar.css">
+    <title>PUBLICAR</title>
+</head>
+<body>
+    <!-- PESTAÑA PUBLICAR -->
+<section id="publicar" class="tab-content">
+    <h2>Publica tu oferta</h2>
+    <form class="publish-form">
+        <div class="form-row">
+            <div class="form-group">
+                <label>Tipo de publicación</label>
+                <select required>
+                    <option value="">Selecciona...</option>
+                    <option value="habitacion">Ofrezco habitación</option>
+                    <option value="departamento">Ofrezco departamento</option>
+                    <option value="busco">Busco roommate</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Precio mensual ($)</label>
+                <input type="number" min="0" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Dirección exacta (se mostrará aproximada)</label>
+            <input type="text" placeholder="Ej: Av. Corrientes 1234" required>
+        </div>
+        <div class="form-group">
+            <label>Descripción detallada</label>
+            <textarea rows="4" placeholder="Características, comodidades, reglas de convivencia..." required></textarea>
+        </div>
+        <div class="form-group">
+            <label>Sube fotos (máx. 5)</label>
+            <div class="file-upload">
+                <label for="fotos">📷 Arrastra o selecciona imágenes</label>
+                <input type="file" id="fotos" accept="image/*" multiple>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Disponibilidad</label>
+            <input type="date" required>
+        </div>
+        <button type="submit" class="publish-button">Publicar oferta</button>
+    </form>
+</section>
+
+</body>
+</html>

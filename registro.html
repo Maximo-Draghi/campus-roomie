@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css/styleregistro.css">
+    <title>REGISTRO</title>
+</head>
+<body>
+    <!-- PESTAÑA REGISTRO -->
+<section id="registro" class="tab-content">
+    <div class="register-container">
+        <h2 class="titulo verificacion">Verificación de estudiante</h2>
+        <p class="parrafo subtitulo">Para garantizar la seguridad de todos, requerimos verificación universitaria.</p>
+        
+        <form class="formulario de registro">
+            <div class="form-group">
+                <label>Nombre completo</label>
+                <input type="text" required>
+            </div>
+            <div class="form-group">
+                <label>Email universitario</label>
+                <input type="email" placeholder="ej: alumno@universidad.edu" required>
+            </div>
+            <div class="form-group">
+                <label>Universidad</label>
+                <select required>
+                    <option value="">Selecciona tu universidad</option>
+                    <option value="uba">UBA</option>
+                    <option value="utn">UTN</option>
+                    <option value="unsam">UNSAM</option>
+                    <option value="otra">Otra universidad</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Certificado de alumno regular</label>
+                <div class="file-upload">
+                    <label for="certificado">📄 Sube tu certificado (PDF o imagen)</label>
+                    <input type="file" id="certificado" accept=".pdf,.jpg,.png" required>
+                </div>
+                <p class="file-hint">Asegúrate que sea legible y esté vigente.</p>
+            </div>
+            <button type="submit" class="boton-registro">Registrarme</button>
+        </form>
+        
+        <div class="login link">
+            <p>¿Ya tienes cuenta? <a href="#">Inicia sesión</a></p>
+        </div>
+    </div>
+</section>
+</body>
+</html>

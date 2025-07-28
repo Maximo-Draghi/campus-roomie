@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css/stylebuscar.css">
+    <title>BUSCAR</title>
+</head>
+<body>
+    <section id="buscar" class="tab-content">
+    <div class="search-header">
+        <h2>Buscar alojamiento</h2>
+        <div class="search-tabs">
+            <button class="active">Habitaciones</button>
+            <button>Roommates</button>
+            <button>Departamentos</button>
+        </div>
+    </div>
+
+    <div class="search-filters">
+        <div class="filter-group">
+            <label>Ubicación</label>
+            <input type="text" placeholder="Universidad o barrio">
+        </div>
+        
+        <div class="filter-row">
+            <div class="filter-group">
+                <label>Precio máximo</label>
+                <select>
+                    <option>$30,000</option>
+                    <option>$45,000</option>
+                    <option>$60,000</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label>Distancia</label>
+                <select>
+                    <option>15 min caminando</option>
+                    <option>30 min en transporte</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="advanced-filters">
+            <h4>Filtros avanzados <span>+</span></h4>
+            <div class="filter-options hidden">
+                <!-- Filtros ocultos inicialmente -->
+            </div>
+        </div>
+    </div>
+
+    <div class="results-container">
+        <div class="result-card">
+            <div class="result-image" style="background: #eee;"></div>
+            <div class="result-details">
+                <h3>Habitación en Recoleta</h3>
+                <p class="price">$42,000/mes</p>
+                <p class="location">📍 A 10 min de UBA Derecho</p>
+                <p class="description">Amplia habitación con escritorio y armario empotrado. Compartir con 2 estudiantes.</p>
+                <div class="tags">
+                    <span>WiFi</span>
+                    <span>Cocina</span>
+                    <span>Lavadero</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
