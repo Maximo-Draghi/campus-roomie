@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Roomie - Encuentra tu espacio universitario</title>
+    <style>
+        /* === ESTILOS GENERALES === */
+        :root {
+            --color-primary: #6e8efb;
+            --color-secondary: #a777e3;
+            --color-accent: #fffc83;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            color: white;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* === HERO SECTION === */
+        .hero-section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero-content h1 span {
+            color: var(--color-accent);
+        }
+
+        .hero-text {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        /* === SECCIÓN DE INTRODUCCIÓN === */
+        .intro-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px auto;
+            max-width: 900px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            color: var(--color-accent);
+        }
+
+        .intro-section p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* === TARJETAS DE CIUDADES === */
+        .cities-section {
+            margin: 60px 0;
+        }
+
+        .cities-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+
+        .city-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 0 20px;
+        }
+
+        .city-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border-radius: 16px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .city-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .city-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .city-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .city-card p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        /* === TESTIMONIOS === */
+        .testimonials-section {
+            margin: 80px 0;
+        }
+
+        .testimonials-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border-radius: 16px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .testimonial-location {
+            font-weight: 600;
+            color: var(--color-accent);
+        }
+
+        .testimonial-rating {
+            color: var(--color-accent);
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .intro-section {
+                padding: 25px;
+            }
+            
+            .city-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Bienvenido a <span>Campus Roomie</span></h1>
+            <p class="hero-text">Tu solución para encontrar alojamiento universitario ideal</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE INTRODUCCIÓN -->
+    <section class="intro-section">
+        <div class="container">
+            <h2>¿Qué es Campus Roomie?</h2>
+            <p>Campus Roomie es la plataforma líder en Argentina que conecta estudiantes con espacios compartidos cerca de las principales universidades del país. Nuestro objetivo es facilitar la búsqueda de alojamiento para estudiantes, asegurando ambientes seguros, verificados y adaptados a tus necesidades académicas.</p>
+            
+            <p>Con más de 5,000 roommates conectados en Buenos Aires, La Plata y Córdoba, hemos creado una comunidad universitaria que valora la compatibilidad de hábitos, horarios y estilos de vida. Nuestro sistema de verificación 360° garantiza que todos los usuarios sean estudiantes reales de instituciones reconocidas.</p>
+            
+            <p>Ya sea que busques una habitación, un departamento para compartir o compañeros de vivienda, Campus Roomie te ofrece herramientas inteligentes para encontrar opciones que se adapten a tu presupuesto, ubicación preferida y estilo de vida.</p>
+        </div>
+    </section>
+
+    <!-- TARJETAS DE CIUDADES -->
+    <section class="cities-section">
+        <div class="container">
+            <h2>Encuentra en las principales ciudades universitarias</h2>
+            
+            <div class="city-cards">
+                <!-- Tarjeta Buenos Aires -->
+                <div class="city-card">
+                    <img src="https://images.unsplash.com/photo-1514477917009-389c76a86b68?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Buenos Aires">
+                    <h3>Buenos Aires</h3>
+                    <p>Conectamos estudiantes de la UBA, UTN, UADE y más de 20 universidades en la capital</p>
+                </div>
+                
+                <!-- Tarjeta La Plata -->
+                <div class="city-card">
+                    <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="La Plata">
+                    <h3>La Plata</h3>
+                    <p>La mejor opción para estudiantes de la UNLP con opciones cerca del bosque</p>
+                </div>
+                
+                <!-- Tarjeta Córdoba -->
+                <div class="city-card">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27a3b1e5dfe8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Córdoba">
+                    <h3>Córdoba</h3>
+                    <p>Comunidad activa para estudiantes de la UNC y universidades privadas</p>
+                </div>
+                
+                <!-- Tarjeta Otras ciudades -->
+                <div class="city-card">
+                    <img src="https://images.unsplash.com/photo-1584473457406-6240486418e9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Otras ciudades">
+                    <h3>+15 Ciudades</h3>
+                    <p>También tenemos cobertura en Rosario, Mendoza, Mar del Plata y más</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>Experiencias de nuestros usuarios</h2>
+            
+            <div class="testimonial-grid">
+                <!-- Testimonio Buenos Aires -->
+                <div class="testimonial-card">
+                    <p>"Gracias a Campus Roomie encontré un departamento a 10 minutos de la Facultad de Derecho (UBA). Mi roommate y yo compartimos horarios de estudio y hasta formamos un grupo para los finales."</p>
+                    <div class="testimonial-info">
+                        <span class="testimonial-location">Camila, Buenos Aires</span>
+                        <span class="testimonial-rating">★★★★★</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonio La Plata -->
+                <div class="testimonial-card">
+                    <p>"Como estudiante de la UNLP, necesitaba algo cerca y seguro. Encontré una habitación en una casa con otros 3 estudiantes de mi misma facultad. ¡Perfecto para los horarios de laboratorio!"</p>
+                    <div class="testimonial-info">
+                        <span class="testimonial-location">Juan, La Plata</span>
+                        <span class="testimonial-rating">★★★★☆</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonio Córdoba -->
+                <div class="testimonial-card">
+                    <p>"Me mudé a Córdoba para estudiar en la UNC y no conocía a nadie. Encontré roommates que ahora son mis amigos y vivimos en Nueva Córdoba, a 3 cuadras de la facu."</p>
+                    <div class="testimonial-info">
+                        <span class="testimonial-location">Lucía, Córdoba</span>
+                        <span class="testimonial-rating">★★★★★</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
