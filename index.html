@@ -1,58 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Roomie - Encuentra tu compañero ideal</title>
     <link rel="stylesheet" href="styles.css/style.css">
-    <title>INICIO</title>
 </head>
 <body>
-    <section id="inicio" class="tab-content active">
-<div class="hero-section">
-    <div class="hero-content">
-        <h2>Encuentra tu <span>roommate ideal</span></h2>
-        <p class="hero-text">Conectamos estudiantes con espacios compartidos cerca de tu universidad</p>
-        <div class="hero-actions">
-            <div class="search-box">
-                <input type="text" placeholder="Ej: UBA, Palermo, 3 ambientes..." class="search-input">
-                <button class="search-button">Buscar</button>
-            </div>
-            <a href="registro.html" target="_blank" class="register-button">
-                Ingresar
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                Campus<span>Roomie</span>
             </a>
-        </div>
-    </div>
-</div>
-
-    <div class="features-section">
-        <div class="feature-card">
-            <div class="feature-icon">🔍</div>
-            <h3>Filtros inteligentes</h3>
-            <p>Encuentra roommates compatibles con tus horarios y hábitos</p>
-        </div>
-        <div class="feature-card highlight">
-            <div class="feature-icon">🏠</div>
-            <h3>Verificación 360°</h3>
-            <p>Todos los usuarios verificados con certificado universitario</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">💰</div>
-            <h3>Sin comisiones</h3>
-            <p>Conectamos estudiantes directamente, sin intermediarios</p>
-        </div>
-    </div>
-
-    <div class="testimonials">
-        <h3>Lo que dicen nuestros usuarios</h3>
-        <div class="testimonial-card">
-            <p>"Encontré a mi roommate perfecto en 2 días. ¡Justo lo que necesitaba!"</p>
-            <div class="user-info">
-                <span class="user-name">María, UBA</span>
-                <span class="user-rating">★★★★★</span>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="introduccion.html">Introducción</a></li>
+                <li><a href="buscar.html">Buscar</a></li>
+                <li><a href="publicar.html">Publicar</a></li>
+            </ul>
+            
+            <div class="nav-buttons" id="navButtons">
+                <a href="login.html" class="nav-button login-btn">Iniciar sesión</a>
+                <a href="registro.html" class="nav-button register-btn">Registrarse</a>
+            </div>
+            
+            <div class="menu-toggle" id="menuToggle">
+                ☰
             </div>
         </div>
-    </div>
-</section>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <section id="inicio" class="tab-content active">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h2>Encuentra tu <span>roommate ideal</span></h2>
+                <p class="hero-text">Conectamos estudiantes con espacios compartidos cerca de tu universidad</p>
+                <div class="hero-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Ej: UBA, Palermo, 3 ambientes..." class="search-input">
+                        <button class="search-button">Buscar</button>
+                    </div>
+                    <a href="registro.html" class="register-button">
+                        Ingresar
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-section">
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>Filtros inteligentes</h3>
+                <p>Encuentra roommates compatibles con tus horarios y hábitos</p>
+            </div>
+            <div class="feature-card highlight">
+                <div class="feature-icon">🏠</div>
+                <h3>Verificación 360°</h3>
+                <p>Todos los usuarios verificados con certificado universitario</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Sin comisiones</h3>
+                <p>Conectamos estudiantes directamente, sin intermediarios</p>
+            </div>
+        </div>
+
+        <div class="testimonials">
+            <h3>Lo que dicen nuestros usuarios</h3>
+            <div class="testimonial-card">
+                <p>"Encontré a mi roommate perfecto en 2 días. ¡Justo lo que necesitaba!"</p>
+                <div class="user-info">
+                    <span class="user-name">María, UBA</span>
+                    <span class="user-rating">★★★★★</span>
+                </div>
+            </div>
+        </div>
+    </section>
+<script src="js/navbar.js"></script>
+</body>
+</html>
 
 
 </body>
